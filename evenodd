@@ -1,0 +1,27 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract SmartTasks {
+
+    function isEvenOrOdd(uint num) public pure returns (string memory) {
+        return num % 2 == 0 ? "Even" : "Odd";
+    }
+}
+
+
+contract EvenOdd { ... }
+Defines a smart contract named EvenOdd.
+A smart contract is a program that runs on the Ethereum blockchain.
+
+function checkEvenOrOdd(uint num)
+This is a public function that anyone can call.
+It takes a number num as input (type: unsigned integer).
+
+public pure returns (string memory)
+public: The function is accessible both inside and outside the contract.
+pure: It doesn’t read from or write to the blockchain (only does computation).
+
+returns (string memory): It gives back a text value (like "Even" or "Odd").
+return num % 2 == 0 ? "Even" : "Odd";
+Uses the modulo operator (%) to check if the number is divisible by 2.
+If the remainder is 0, it returns "Even", else it returns "Odd".
