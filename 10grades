@@ -1,0 +1,34 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract SmartTasks {
+        function getGrade(uint marks) public pure returns (string memory) {
+        if (marks >= 90) return "A";
+        else if (marks >= 60) return "B";
+        else if (marks >= 50) return "C";
+        else if (marks >= 40) return "D";
+        else return "F";
+    }
+}
+
+10 - grades
+// SPDX-License-Identifier: MIT
+Declares the software license (MIT), which is open-source and widely accepted.
+
+It ensures legal clarity and compatibility with Remix IDE.
+
+pragma solidity ^0.8.0;
+Specifies that this code is compatible with Solidity version 0.8.0 or higher.
+Ensures access to the latest compiler features and security fixes.
+
+contract SmartTasks {
+Defines a smart contract named SmartTasks.
+A smart contract is a self-executing program that runs on the Ethereum blockchain.
+
+
+function getGrade(uint marks) public pure returns (string memory) {
+Declares a function named getGrade.
+Takes one unsigned integer parameter marks.
+public: The function can be called from outside the contract.
+pure: It doesn't read or write any blockchain data (only processes input).
+Returns a string stored in memory.
