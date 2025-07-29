@@ -1,0 +1,40 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract SmartTasks {
+ function isPrime(uint num) public pure returns (bool) {
+        if (num <= 1) return false;
+        for (uint i = 2; i * i <= num; i++) {
+            if (num % i == 0) return false;
+        }
+        return true;
+    }
+}
+
+3 - prime
+Defines a smart contract named PrimeCheck.
+A smart contract is a program that runs on the Ethereum blockchain.
+
+function isPrime(uint num)
+This is a public function that anyone can call.
+It takes a number num as input (type: unsigned integer).
+
+public pure returns (bool)
+public: The function is accessible both inside and outside the contract.
+pure: It doesn’t read from or write to the blockchain (only does computation).
+returns (bool): It returns either true or false.
+
+if (num <= 1) return false;
+Checks if the number is less than or equal to 1.
+If yes, it is not prime, so the function returns false.
+
+for (uint i = 2; i * i <= num; i++) {
+    if (num % i == 0) return false;
+}
+Loops from 2 up to the square root of the number.
+If the number is divisible by any value in this range, it's not prime.
+
+
+return true;
+If no divisors are found in the loop,
+the number is prime, so the function returns true.
