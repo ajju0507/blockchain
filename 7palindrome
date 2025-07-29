@@ -1,0 +1,32 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract SmartTasks {
+    function isPalindrome(string memory str) public pure returns (bool) {
+        bytes memory s = bytes(str);
+        uint len = s.length;
+        for (uint i = 0; i < len / 2; i++) {
+            if (s[i] != s[len - 1 - i]) return false;
+        }
+        return true;
+    }
+}
+
+7 - Palindrome number or string
+bytes memory s = bytes(str);
+Converts the input string into a byte array to allow indexing.
+Necessary because strings cannot be directly accessed by index in Solidity.
+
+uint len = s.length;
+Stores the length of the byte array into a variable len.
+
+for (uint i = 0; i < len / 2; i++) {
+Starts a loop that runs from the beginning to the middle of the string.
+Only half the string is checked since each character is compared with its corresponding character from the end.
+
+if (s[i] != s[len - 1 - i]) return false;
+Compares the character at index i with its mirror character from the end.
+If any mismatch is found, the function immediately returns false.
+
+return true;
+If all characters match in the loop, the string is a palindrome and the function returns true.
