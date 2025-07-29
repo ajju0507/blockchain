@@ -1,0 +1,17 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract SmartTasks {
+      function getStringLength(string memory str) public pure returns (uint) {
+        return bytes(str).length;
+    }
+}
+
+6 - length of string
+function getStringLength(string memory str)
+Defines a function that takes a string input called str.
+
+return bytes(str).length;
+Converts the string to bytes.
+
+Returns the total number of bytes (characters) in the string.
