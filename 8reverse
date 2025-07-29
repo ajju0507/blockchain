@@ -1,0 +1,30 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract SmartTasks {
+        function reverseDigits(uint num) public pure returns (uint) {
+        uint rev = 0;
+        while (num > 0) {
+            rev = rev * 10 + num % 10;
+            num /= 10;
+        }
+        return rev;
+    }
+}
+
+8 - reverse
+uint rev = 0;
+Initializes a variable rev to store the reversed number.
+
+while (num > 0) {
+Starts a loop that runs as long as num is greater than zero.
+
+rev = rev * 10 + num % 10;
+Extracts the last digit of num using num % 10.
+Adds it to the reversed number rev after shifting its digits left (×10).
+
+num /= 10;
+Removes the last digit from num by dividing it by 10.
+
+return rev;
+After the loop finishes, returns the reversed number.
