@@ -1,0 +1,23 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract SmartTasks {
+    function findGreatest(uint a, uint b, uint c) public pure returns (uint) {
+        uint max = a;
+        if (b > max) max = b;
+        if (c > max) max = c;
+        return max;
+    }
+}
+
+5 - Greatest
+function findGreatest(uint a, uint b, uint c)
+Defines a public function that takes three unsigned integers as input: a, b, and c.
+
+uint max = a;
+if (b > max) max = b;
+if (c > max) max = c;
+return max;
+Starts by assuming a is the greatest.
+Compares b and c to update the maximum value.
+Finally, returns the greatest number among a, b, and c.
