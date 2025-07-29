@@ -1,0 +1,17 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract SmartTasks {
+    function helloBlockchain() public pure returns (string memory) {
+        return "Hello, Blockchain!";
+    }
+}
+
+1 - Helloworld
+function helloBlockchain() public pure returns (string memory)
+A function named helloBlockchain that:
+Is public: Can be called by anyone.
+Is pure: Does not read or write any blockchain data (just returns a value).
+Returns a string stored in memory.
+return "Hello, Blockchain!";
+Returns a simple message: "Hello, Blockchain!" when the function is called.
