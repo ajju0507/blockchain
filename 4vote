@@ -1,0 +1,22 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract SmartTasks {
+    function isEligibleToVote(uint age) public pure returns (bool) {
+        return age >= 18;
+    }
+}
+
+4 - vote
+function isEligibleToVote(uint age)
+This is a function that checks if a person is eligible to vote.
+It takes one input: age of type unsigned integer (uint).
+
+public pure returns (bool)
+public: Anyone can call this function from inside or outside the contract.
+pure: It does not read or write data to the blockchain (just calculates).
+returns (bool): It returns true or false.
+
+return age >= 18;
+Checks if the age is 18 or more.
+If yes, it returns true (eligible to vote); otherwise, it returns false.
