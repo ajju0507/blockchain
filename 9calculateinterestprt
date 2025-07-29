@@ -1,0 +1,21 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract SmartTasks {
+        function calculateSimpleInterest(uint p, uint r, uint t) public pure returns (uint) {
+        return (p * r * t) / 100;
+    }
+}
+
+9 - calculate interest
+function calculateSimpleInterest(uint p, uint r, uint t) public pure returns (uint) {
+Function named calculateSimpleInterest.
+Takes three unsigned integer parameters:
+p: Principal amount
+r: Rate of interest
+t: Time period
+
+
+return (p * r * t) / 100;
+Computes Simple Interest using the formula:
+​Returns the result directly.
